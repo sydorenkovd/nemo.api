@@ -4,22 +4,13 @@
   "type": "symfony-bundle",
   "autoload": {
     "psr-4": {
-      "Sydorenkovd\\NemoAPI\\": "/"
+      "Nemo\\Library\\": "src",
+      "Nemo\\Library\\Core\\": "src/Core"
     }
   },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "git@sv-devel.silpovoyage.com.ua:web/nemo.git"
-    }
-  ],
   "require": {
     "php": ">=5.4",
-    "ext-curl": "*",
-    "argest/lib": "v1.1.*",
-    "symfony/framework-bundle": "^2.7 || ^3.0",
-    "symfony/symfony": "3.2.*",
-    "symfony/yaml": "^2.7 || ^3.0"
+    "ext-curl": "*"
   },
   "license": "MIT",
   "authors": [
