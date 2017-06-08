@@ -6,7 +6,7 @@
  * Time: 10:41
  */
 
-namespace Nemo\Library;
+namespace Nemo\Library\Core;
 
 
 use Nemo\Library\Response\Iterators\CustomArrayIterator;

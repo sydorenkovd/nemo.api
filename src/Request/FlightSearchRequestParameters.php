@@ -9,7 +9,7 @@
 namespace Nemo\Library\Request;
 
 
-use Nemo\Library\BaseHelper;
+use Nemo\Library\Core\BaseHelper;
 
 class FlightSearchRequestParameters
 {

@@ -10,7 +10,7 @@
 namespace Nemo\Library\Request;
 
 
-use Nemo\Library\BaseHelper;
+use Nemo\Library\Core\BaseHelper;
 use Nemo\Library\Response\Iterators\CustomArrayIterator;
 
 class FlightSearchRequest
