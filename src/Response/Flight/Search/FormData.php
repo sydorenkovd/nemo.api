@@ -6,10 +6,10 @@
  * Time: 14:58
  */
 
-namespace Nemo\Library\Response;
+namespace Nemo\Library\Response\Flight\Search;
 
 
-class FlightSearchFormData
+class FormData
 {
     private $id;
     private $maxLimits;

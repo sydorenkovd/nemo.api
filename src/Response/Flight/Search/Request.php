@@ -6,13 +6,13 @@
  * Time: 15:38
  */
 
-namespace Nemo\Library\Response;
+namespace Nemo\Library\Response\Flight\Search;
 
 
 use Nemo\Library\Response\Iterators\CustomArrayIterator;
 use Nemo\Library\Response\Iterators\SegmentsIterator;
 
-class FlightSearchRequest
+class Request
 {
 
     private $segments;
