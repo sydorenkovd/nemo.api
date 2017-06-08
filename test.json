@@ -1,0 +1,219 @@
+{
+  "flightGroups": [
+    {
+      "segments": [
+        "S1",
+        "S2"
+      ],
+      "flights": [
+        {
+          "id": 601010001,
+          "price": "P1"
+        }
+      ]
+    }
+  ],
+  "groupsData": {
+    "prices": {
+      "P1": {
+        "flightPrice": {
+          "amount": 119.01888888889,
+          "currency": "USD"
+        },
+        "agencyCharge": {
+          "amount": -2.9711111111111,
+          "currency": "USD"
+        },
+        "totalPrice": {
+          "amount": 119.01888888889,
+          "currency": "USD"
+        },
+        "priceWithoutPromocode": {
+          "amount": 110.01888888889,
+          "currency": "USD"
+        },
+        "validatingCompany": "PS",
+        "refundable": false,
+        "privateFareInd": false,
+        "ticketTimeLimit": "2015-05-27T23:59:59",
+        "service": "SABRE",
+        "avlSeatsMin": 6,
+        "pricingDebug": {
+          "link": "index.php?go=debug/pricing&flight_id=601010001",
+          "text": "Комиссия: Нет"
+        },
+        "warnings": {
+          "insBookingNotAllowedBySupplier": "Бронирование отдельного сидячего места для младенца не допускается перевозчиком"
+        },
+        "passengerFares": [
+          {
+            "type": "ADT",
+            "count": 1,
+            "baseFare": {
+              "amount": 50,
+              "currency": "EUR"
+            },
+            "equivFare": {
+              "amount": 55,
+              "currency": "USD"
+            },
+            "totalFare": {
+              "amount": 121.99,
+              "currency": "USD"
+            },
+            "taxes": [
+              {
+                "YQF": {
+                  "amount": 16.5,
+                  "currency": "USD"
+                }
+              },
+              {
+                "YQI": {
+                  "amount": 1,
+                  "currency": "USD"
+                }
+              },
+              {
+                "YRI": {
+                  "amount": 10,
+                  "currency": "USD"
+                }
+              },
+              {
+                "YRI": {
+                  "amount": 10,
+                  "currency": "USD"
+                }
+              },
+              {
+                "RI": {
+                  "amount": 8.69,
+                  "currency": "USD"
+                }
+              },
+              {
+                "UH": {
+                  "amount": 6.3,
+                  "currency": "USD"
+                }
+              },
+              {
+                "UA": {
+                  "amount": 4,
+                  "currency": "USD"
+                }
+              },
+              {
+                "UD": {
+                  "amount": 2,
+                  "currency": "USD"
+                }
+              },
+              {
+                "YK": {
+                  "amount": 8.5,
+                  "currency": "USD"
+                }
+              }
+            ],
+            "tariffs": [
+              {
+                "code": "JAPOWPS4",
+                "segNum": 0,
+                "routeNumber": 0
+              },
+              {
+                "code": "JAPOWPS4",
+                "segNum": 1,
+                "routeNumber": 0
+              }
+            ]
+          }
+        ],
+        "segmentInfo": [
+          {
+            "segNum": 0,
+            "bookingClass": "J",
+            "serviceClass": "Economy",
+            "avlSeats": 6,
+            "freeBaggage": [
+              {
+                "passtype": "ADT",
+                "value": 1,
+                "measurement": "pc"
+              }
+            ]
+          },
+          {
+            "segNum": 1,
+            "bookingClass": "J",
+            "serviceClass": "Economy",
+            "avlSeats": 8,
+            "freeBaggage": [
+              {
+                "passtype": "ADT",
+                "value": 1,
+                "measurement": "pc"
+              }
+            ]
+          }
+        ],
+        "id": "P1"
+      }
+    },
+    "segments": {
+      "S1": {
+        "id": "S1",
+        "depAirp": "DME",
+        "arrAirp": "KBP",
+        "routeNumber": 0,
+        "operatingCompany": "PS",
+        "marketingCompany": "PS",
+        "flightNumber": "576",
+        "aircraftType": "73H",
+        "depDateTime": "2015-07-06T06:35:00",
+        "arrDateTime": "2015-07-06T08:05:00",
+        "depTerminal": "",
+        "arrTerminal": "",
+        "flightTime": 90,
+        "eTicket": true,
+        "stopPoints": [
+          {
+            "airportCode": "DME",
+            "cityCode": "MOW",
+            "utc": null,
+            "terminal": "A",
+            "depDateTime": "2015-07-06T07:35:00",
+            "arrDateTime": "2015-07-06T07:55:00",
+            "passengerLanding": null
+          }
+        ]
+      },
+      "S2": {
+        "id": "S2",
+        "depAirp": "KBP",
+        "arrAirp": "CDG",
+        "routeNumber": 0,
+        "operatingCompany": "PS",
+        "marketingCompany": "PS",
+        "flightNumber": "127",
+        "aircraftType": "73J",
+        "depDateTime": "2015-07-06T12:50:00",
+        "arrDateTime": "2015-07-06T09:20:00",
+        "depTerminal": "",
+        "arrTerminal": "",
+        "flightTime": 210,
+        "eTicket": true,
+        "stopPoints": null
+      }
+    }
+  },
+  "info": {
+    "errorCode": null,
+    "errorMessageEng": null
+  },
+  "id": 49825,
+  "uri": "/api/flights/search/results/49825",
+  "matrixUri": "/api/flights/search/results/49821"
+}
