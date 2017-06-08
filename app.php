@@ -30,7 +30,15 @@ echo "<pre>";
 //
 //}
 
-$fl = new \Nemo\Library\Request\FlightSearchScheduleRequest();
-$fl->getDeparture()->setIATA('ia');
-print_r($fl);
+//$fl = new \Nemo\Library\Request\FlightSearchScheduleRequest();
+//$fl->getDeparture()->setIATA('ia');
+
+
+//$aircraft = new \Nemo\Library\Response\GuideAircraft();
+//$aircraft->setOriginCountries([
+//    "RU"
+//]);
+//foreach ($aircraft->getOriginCountries() as $single) {
+//    print_r($single);
+//}
 

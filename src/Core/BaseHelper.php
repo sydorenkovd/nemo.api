@@ -17,7 +17,18 @@ class BaseHelper
      * @param $data
      * @return \ArrayIterator|\Traversable
      */
-    public function getIterator($data) {
-       return (new CustomArrayIterator($data))->getIterator();
+    public function getIterator($data)
+    {
+        if ($data instanceof \ArrayIterator) {
+            return $data;
+        } else {
+            if ($data) {
+                return (new CustomArrayIterator($data))->getIterator();
+            } else {
+                return null;
+            }
+
+        }
+
     }
 }
