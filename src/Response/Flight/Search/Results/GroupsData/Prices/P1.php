@@ -7,6 +7,7 @@
  * Time: 14:33
  */
 namespace Nemo\Library\Response\Flight\Search\Result\GroupsData\Prices;
+use Nemo\Library\Core\BaseHelper;
 use Nemo\Library\Core\Price;
 use Nemo\Library\Response\Flight\Search\Result\GroupsData\Prices\P1\PricingDebug;
 use Nemo\Library\Response\Flight\Search\Result\GroupsData\Prices\P1\Warnings;
@@ -27,8 +28,14 @@ class P1
     private $avlSeatsMin;
     private $pricingDebug;
     private $warnings;
+    /** collection of objects */
     private $passengerFares;
 
+    /** collection of objects */
+    private $segmentInfo;
+    private $id;
+
+    private $base;
     public function __construct()
     {
         $this->flightPrice = new Price();
@@ -38,7 +45,86 @@ class P1
 
         $this->pricingDebug = new PricingDebug();
         $this->warnings = new Warnings();
+        $this->base = new BaseHelper();
     }
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    /**
+     * @return mixed
+     */
+    public function getSegmentInfo()
+    {
+        return $this->base->getIterator($this->segmentInfo);;
+    }
+
+    /**
+     * @param mixed $segmentInfo
+     */
+    public function setSegmentInfo($segmentInfo)
+    {
+        $this->segmentInfo = $this->base->getIterator($segmentInfo);
+    }
+    /**
+     * @return PricingDebug
+     */
+    public function getPricingDebug()
+    {
+        return $this->pricingDebug;
+    }
+
+    /**
+     * @param PricingDebug $pricingDebug
+     */
+    public function setPricingDebug($pricingDebug)
+    {
+        $this->pricingDebug = $pricingDebug;
+    }
+
+    /**
+     * @return Warnings
+     */
+    public function getWarnings()
+    {
+        return $this->warnings;
+    }
+
+    /**
+     * @param Warnings $warnings
+     */
+    public function setWarnings($warnings)
+    {
+        $this->warnings = $warnings;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassengerFares()
+    {
+        return $this->base->getIterator($this->passengerFares);
+    }
+
+    /**
+     * @param mixed $passengerFares
+     */
+    public function setPassengerFares($passengerFares)
+    {
+        $this->passengerFares = $this->base->getIterator($passengerFares);
+    }
+
     /**
      * @return Price
      */
