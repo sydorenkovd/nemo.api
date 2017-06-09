@@ -9,6 +9,7 @@
 namespace Nemo\Library\Response\Flight\Search\Request;
 
 use Nemo\Library\Core\BaseHelper;
+use Nemo\Library\Response\Flight\Search\Request\Parameters\Airlines;
 
 class Parameters
 {
@@ -20,13 +21,14 @@ class Parameters
     private $airlines;
     private $base;
 
+    public $test;
     public function __construct()
     {
         $this->base = new BaseHelper();
     }
 
     /**
-     * @return mixed
+     * @return Airlines
      */
     public function getAirlines()
     {
@@ -36,9 +38,11 @@ class Parameters
     /**
      * @param mixed $airlines
      */
-    public function setAirlines($airlines)
+    public function setAirlines($airlines, $class = null)
     {
-        $this->airlines = $this->base->getIterator($airlines);
+        $this->airlines = $this->base->getIterator($airlines, $class);
+        $this->test = $class;
+        return $this;
     }
 
     /**

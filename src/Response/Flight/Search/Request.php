@@ -10,6 +10,7 @@ namespace Nemo\Library\Response\Flight\Search;
 
 
 use Nemo\Library\Core\BaseHelper;
+use Nemo\Library\Response\Flight\Search\Request\Parameters;
 use Nemo\Library\Response\Iterators\CustomArrayIterator;
 use Nemo\Library\Response\Iterators\SegmentsIterator;
 
@@ -25,10 +26,10 @@ class Request
     public function __construct()
     {
         $this->base = new BaseHelper();
-        $this->parameters = '';
+        $this->parameters = new Parameters();
     }
     /**
-     * @return mixed
+     * @return Parameters
      */
     public function getParameters()
     {
@@ -56,11 +57,13 @@ class Request
 
     /**
      * @param mixed $passengers
+     * @param null $class
      */
-    public function setPassengers($passengers)
+    public function setPassengers($passengers, $class = null)
     {
-        $this->passengers = $this->base->getIterator($passengers);;
+        $this->passengers = $this->base->getIterator($passengers, $class);
     }
+
     /**
      * @return SegmentsIterator
      */
@@ -70,11 +73,11 @@ class Request
     }
 
     /**
-     * @param SegmentsIterator $segments
+     * @param array $segments
      */
-    public function setSegments($segments)
+    public function setSegments($segments, $class)
     {
-        $this->segments = $this->base->getIterator($segments);
+        $this->segments = $this->base->getIterator($segments, $class);
     }
 
 }
