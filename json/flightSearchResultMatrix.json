@@ -1,0 +1,64 @@
+{
+  "rangeData": [
+    {
+      "uri": "/api/flights/search/results/53159/2015-06-12/2015-06-17",
+      "flightDate": "2015-06-12",
+      "flightDateBack": "2015-06-17",
+      "minPriceFlight": {
+        "minPrice": {
+          "amount": "16851",
+          "currency": "RUB"
+        },
+        "carrier": "OS",
+        "segments": [
+          {
+            "routeNumber": 0,
+            "serviceClass": "economy",
+            "depDateTime": "2015-06-12T14:40:00",
+            "arrDateTime": "2015-06-12T17:20:00",
+            "depAirp": "DME",
+            "arrAirp": "CDG"
+          },
+          {
+            "routeNumber": 1,
+            "serviceClass": "economy",
+            "depDateTime": "2015-06-17T07:15:00",
+            "arrDateTime": "2015-06-17T10:00:00",
+            "depAirp": "CDG",
+            "arrAirp": "DME"
+          }
+        ]
+      }
+    },
+    {
+      "uri": "/api/flights/search/results/53159/2015-06-12/2015-06-18",
+      "flightDate": "2015-06-12",
+      "flightDateBack": "2015-06-18",
+      "minPriceFlight": {
+        "minPrice": {
+          "amount": "16222",
+          "currency": "RUB"
+        },
+        "carrier": "OS",
+        "segments": [
+          {
+            "routeNumber": 0,
+            "serviceClass": "economy",
+            "depDateTime": "2015-06-12T14:40:00",
+            "arrDateTime": "2015-06-12T17:20:00",
+            "depAirp": "DME",
+            "arrAirp": "CDG"
+          },
+          {
+            "routeNumber": 1,
+            "serviceClass": "economy",
+            "depDateTime": "2015-06-18T17:25:00",
+            "arrDateTime": "2015-06-18T20:40:00",
+            "depAirp": "CDG",
+            "arrAirp": "DME"
+          }
+        ]
+      }
+    }
+  ]
+}

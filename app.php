@@ -41,4 +41,6 @@ echo "<pre>";
 //foreach ($aircraft->getOriginCountries() as $single) {
 //    print_r($single);
 //}
+$matrix = new \Nemo\Library\Request\Matrix('/api/flights/search/results/53159/2015-07-09/2015-07-14');
 
+var_dump($matrix);
