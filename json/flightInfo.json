@@ -1,0 +1,41 @@
+{
+  "isAvail": true,
+  "priceStatus": {
+    "changed": false,
+    "oldValue": {
+      "amount": 89752,
+      "currency": "RUB"
+    },
+    "newValue": {
+      "amount": 89752,
+      "currency": "RUB"
+    }
+  },
+  "tariffRules": {
+    "BNOW": [
+      {
+        "name": "RULE APPLICATION AND OTHER CONDITIONS",
+        "text": "NOTE - THE FOLLOWING TEXT IS INFORMATIONAL AND NOT\nVALIDATED FOR AUTOPRICING...",
+        "code": "50"
+      },
+      {
+        "name": "ELIGIBILITY",
+        "text": "NO ELIGIBILITY REQUIREMENTS APPLY.",
+        "code": "01"
+      }
+    ],
+    "QNCOW": [
+      {
+        "name": "RULE APPLICATION AND OTHER CONDITIONS",
+        "text": "NOTE - THE FOLLOWING TEXT IS INFORMATIONAL AND NOT\nVALIDATED FOR AUTOPRICING...",
+        "code": "50"
+      },
+      {
+        "name": "ELIGIBILITY",
+        "text": "NO ELIGIBILITY REQUIREMENTS APPLY.",
+        "code": "01"
+      }
+    ]
+  },
+  "createOrderLink": "/create__order?flightId=767910178"
+}
