@@ -17,13 +17,45 @@ class BaseHelper
         foreach ($data as $name => $value) {
             if($name == 'request') {
                 $method = 'get'.ucfirst($name);
+                // request
                 $fValue = $model->$method();
-                if(is_object($fValue)) {
-                    $props = $this->reflection($fValue);
-                    if(!empty($props)) {
-                        foreach ($props as $prop) {
+                $this->iterate($fValue, $value);
+                $model->test = $fValue;
+            }
+        }
+    }
 
+    private function iterate($fValue, $value) {
+        if(is_object($fValue)) {
+            $props = $this->reflection($fValue);
+            if(!empty($props)) {
+                foreach ($props as $prop) {
+                    try {
+                        $methodGet = 'get'. ucfirst($prop->name);
+                        $methodSet = 'set'. ucfirst($prop->name);
+                        if(method_exists($fValue, $methodGet)) {
+                            $sValue = $fValue->$methodGet();
+                            if($sValue === null) {
+                                $fValue->$methodSet($value[$prop->name]);
+                            } else if ($sValue == 'array' || is_a($sValue, \ArrayIterator::class)) {
+                                $locClass = get_class($sValue[0]);
+                                $props = $this->reflection($sValue[0]);
+                                unset($sValue[0]);
+                                    foreach ($value[$prop->name] as $objData) {
+                                        $obj = new $locClass();
+                                        foreach ($props as $prop) {
+                                            $method = 'set' .ucfirst($prop->name);
+                                            $obj->$method($objData[$prop->name]);
+                                        }
+                                        $sValue->append($obj);
+                                    }
+//                                    die(print_r($sValue));
+                            } else if ($sValue == 'object' || is_object($sValue)) {
+                                    $this->iterate($sValue, $value[$prop->name]);
+                            }
                         }
+                    } catch (\Exception $e) {
+                        $errors = $e->getMessage();
                     }
                 }
             }
@@ -32,6 +64,11 @@ class BaseHelper
 
     private function reflection($object) {
         return (new \ReflectionClass($object))->getProperties(\ReflectionProperty::IS_PRIVATE | \ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED);
+    }
+
+
+    public function createIterator($class) {
+        return new \ArrayIterator([new $class()]);
     }
     /**
      * @param $data
@@ -72,7 +109,7 @@ class BaseHelper
                 if ($data) {
                     return (new CustomArrayIterator($data))->getIterator();
                 } else {
-                    return null;
+                    return $data;
                 }
             }
         }

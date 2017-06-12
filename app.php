@@ -189,8 +189,11 @@ $data = json_decode('{
           "isDateRange": false
      }', true);
 $history = new \Nemo\Library\Response\Flight\Search\History($data);
-
-print_r($history->test);
+//$ar = new ArrayIterator([]);
+//$ar->rewind()
+foreach ($history->getRequest()->getSegments() as $segment) {
+    print_r($segment->getDeparture()['cityId']);
+}
 
 
 
