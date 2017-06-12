@@ -68,6 +68,70 @@ class MaxLimits
     }
 
     /**
+     * @param mixed $ADT
+     */
+    public function setADT($ADT)
+    {
+        $this->ADT = $ADT;
+    }
+
+    /**
+     * @param mixed $CLD
+     */
+    public function setCLD($CLD)
+    {
+        $this->CLD = $CLD;
+    }
+
+    /**
+     * @param mixed $SRC
+     */
+    public function setSRC($SRC)
+    {
+        $this->SRC = $SRC;
+    }
+
+    /**
+     * @param mixed $YTH
+     */
+    public function setYTH($YTH)
+    {
+        $this->YTH = $YTH;
+    }
+
+    /**
+     * @param mixed $INF
+     */
+    public function setINF($INF)
+    {
+        $this->INF = $INF;
+    }
+
+    /**
+     * @param mixed $INS
+     */
+    public function setINS($INS)
+    {
+        $this->INS = $INS;
+    }
+
+    /**
+     * @param mixed $totalPassengers
+     */
+    public function setTotalPassengers($totalPassengers)
+    {
+        $this->totalPassengers = $totalPassengers;
+    }
+
+    /**
+     * @param mixed $flightSegments
+     */
+    public function setFlightSegments($flightSegments)
+    {
+        $this->flightSegments = $flightSegments;
+    }
+
+    /**
      * @return mixed
      */
     public function getTotalPassengers()

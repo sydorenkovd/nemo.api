@@ -15,13 +15,10 @@ class BaseHelper
 {
     public function mapper($data, $model) {
         foreach ($data as $name => $value) {
-            if($name == 'request') {
                 $method = 'get'.ucfirst($name);
                 // request
                 $fValue = $model->$method();
                 $this->iterate($fValue, $value);
-                $model->test = $fValue;
-            }
         }
     }
 
