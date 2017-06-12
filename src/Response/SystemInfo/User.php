@@ -6,10 +6,11 @@
  * Time: 16:35
  */
 
-namespace Nemo\Library\Response;
+namespace Nemo\Library\Response\SystemInfo;
 
+use Nemo\Library\Response\SystemInfo\User\Settings;
 
-class SystemInfoUser
+class User
 {
     private $userID;
     private $agencyID;
@@ -19,7 +20,7 @@ class SystemInfoUser
 
     public function __construct()
     {
-        $this->settings = new SystemInfoUserSettings();
+        $this->settings = new Settings();
     }
 
     /**

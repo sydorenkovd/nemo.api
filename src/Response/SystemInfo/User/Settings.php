@@ -6,10 +6,10 @@
  * Time: 16:37
  */
 
-namespace Nemo\Library\Response;
+namespace Nemo\Library\Response\SystemInfo\User;
 
 
-class SystemInfoUserSettings
+class Settings
 {
     private $currentLanguage;
     private $currentCurrency;

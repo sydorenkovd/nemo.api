@@ -6,10 +6,10 @@
  * Time: 16:33
  */
 
-namespace Nemo\Library\Response;
+namespace Nemo\Library\Response\SystemInfo;
 
 
-class SystemInfoResponse
+class Response
 {
 
     private $timestamp;
