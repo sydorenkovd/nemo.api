@@ -13,6 +13,26 @@ use Nemo\Library\Response\Iterators\CustomArrayIterator;
 
 class BaseHelper
 {
+    public function mapper($data, $model) {
+        foreach ($data as $name => $value) {
+            if($name == 'request') {
+                $method = 'get'.ucfirst($name);
+                $fValue = $model->$method();
+                if(is_object($fValue)) {
+                    $props = $this->reflection($fValue);
+                    if(!empty($props)) {
+                        foreach ($props as $prop) {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private function reflection($object) {
+        return (new \ReflectionClass($object))->getProperties(\ReflectionProperty::IS_PRIVATE | \ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED);
+    }
     /**
      * @param $data
      * @param null $class
@@ -31,8 +51,7 @@ class BaseHelper
                         if (is_array($value)) {
                             $getNestedObject = 'get' . ucfirst($name);
                             $nestedObject = $object->$getNestedObject();
-                            $reflect = new \ReflectionClass($nestedObject);
-                            $props = $reflect->getProperties(\ReflectionProperty::IS_PRIVATE | \ReflectionProperty::IS_PUBLIC | \ReflectionProperty::IS_PROTECTED);
+                            $props = $this->reflection($nestedObject);
                             foreach ($props as $prop) {
                                 if(isset($value[$prop->name])) {
                                     $nestedMethod = 'set' . ucfirst($prop->name);

@@ -9,7 +9,7 @@
 namespace Nemo\Library\Response\Flight\Search\Request;
 
 
-use Nemo\Library\Core\RequestAirport;
+use Nemo\Library\Core\Airport;
 
 class Segments
 {
@@ -20,8 +20,8 @@ class Segments
 
     public function __construct()
     {
-        $this->departure = new RequestAirport();
-        $this->arrival = new RequestAirport();
+        $this->departure = new Airport();
+        $this->arrival = new Airport();
     }
 
     /**

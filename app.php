@@ -73,7 +73,6 @@ echo "<pre>";
 
 
 
-
 //=====================================
 //$uagent = "Opera/9.80 (Windows NT 6.1; WOW64) Presto/2.12.388 Version/12.14";
 //$url  = "http://ya.ru";
@@ -103,3 +102,110 @@ echo "<pre>";
 //    'base_uri' => 'http://httpbin.org',
 //    'timeout'  => 2.0,
 //]);
+
+
+
+$data = json_decode('{
+          "request": {
+               "id": 59673,
+               "uri": "/api/flights/search/request/59673",
+               "segments": [
+                    {
+                         "departure": {
+                              "IATA": "MOW",
+                              "isCity": true,
+                              "cityId": 58165
+                         },
+                         "arrival": {
+                              "IATA": "BER",
+                              "isCity": true,
+                              "cityId": 22046
+                         },
+                         "departureDate": "2015-09-10T00:00:00"
+                    }
+               ],
+               "passengers": [
+                    {
+                         "type": "ADT",
+                         "count": 1
+                    }
+               ],
+               "parameters": {
+                    "searchType": "OW",
+                    "direct": false,
+                    "aroundDates": 0,
+                    "serviceClass": "Economy",
+                    "airlines": [],
+                    "delayed": true
+               }
+          },
+          "formData": {
+               "maxLimits": {
+                    "passengerCount": {
+                         "ADT": "5",
+                         "SRC": "5",
+                         "YTH": "5",
+                         "CLD": "5",
+                         "INF": "1",
+                         "INS": "3"
+                    },
+                    "totalPassengers": "6",
+                    "flightSegments": "6"
+               },
+               "dateOptions": {
+                    "minOffset": 0,
+                    "maxOffset": 365,
+                    "incorrectDatesBlock": true,
+                    "aroundDatesValues": [
+                         0,
+                         1,
+                         3
+                    ]
+               },
+               "useURLParams": true,
+               "showCitySwapBtn": false,
+               "passengersSelect": {
+                    "extendedPassengersSelect": true,
+                    "fastPassengersSelect": [
+                         {
+                              "label": "singleAdult",
+                              "set": {
+                                   "ADT": 1
+                              }
+                         },
+                         {
+                              "label": "twoAdults",
+                              "set": {
+                                    "ADT": 2
+                              }
+                         }
+                    ]
+               },
+               "id": 59673,
+               "uri": "/api/flights/search/formData/59673"
+          },
+          "hasResults": true,
+          "resultsCount": 125,
+          "isDateRange": false
+     }', true);
+$history = new \Nemo\Library\Response\Flight\Search\History($data);
+
+print_r($history->test);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

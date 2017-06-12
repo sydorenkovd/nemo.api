@@ -9,7 +9,7 @@
 namespace Nemo\Library\Request;
 
 
-use Nemo\Library\Core\RequestAirport;
+use Nemo\Library\Core\Airport;
 
 class FlightSearchScheduleRequest
 {
@@ -23,7 +23,7 @@ class FlightSearchScheduleRequest
     private $arrival;
 
     /**
-     * @return RequestAirport
+     * @return Airport
      */
     public function getDeparture()
     {
@@ -31,7 +31,7 @@ class FlightSearchScheduleRequest
     }
 
     /**
-     * @param RequestAirport $departure
+     * @param Airport $departure
      */
     public function setDeparture($departure)
     {
@@ -39,7 +39,7 @@ class FlightSearchScheduleRequest
     }
 
     /**
-     * @return RequestAirport
+     * @return Airport
      */
     public function getArrival()
     {
@@ -47,7 +47,7 @@ class FlightSearchScheduleRequest
     }
 
     /**
-     * @param RequestAirport $arrival
+     * @param Airport $arrival
      */
     public function setArrival($arrival)
     {
@@ -57,8 +57,8 @@ class FlightSearchScheduleRequest
 
     public function __construct()
     {
-        $this->departure = new RequestAirport();
-        $this->arrival = new RequestAirport();
+        $this->departure = new Airport();
+        $this->arrival = new Airport();
     }
 
     /**

@@ -9,7 +9,7 @@
 namespace Nemo\Library\Core;
 
 
-class RequestAirport
+class Airport
 {
 
     private $IATA;

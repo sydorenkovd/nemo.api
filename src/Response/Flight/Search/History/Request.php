@@ -17,6 +17,12 @@ class Request
     private $segments;
     private $passengers;
     private $parameters;
+
+    public function __construct()
+    {
+
+    }
+
     /**
      * @return mixed
      */

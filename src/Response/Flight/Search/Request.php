@@ -17,9 +17,9 @@ use Nemo\Library\Response\Iterators\SegmentsIterator;
 class Request
 {
 
-    private $segments;
+    private $segments = [];
 
-    private $passengers;
+    private $passengers = [];
     private $parameters;
     private $base;
 

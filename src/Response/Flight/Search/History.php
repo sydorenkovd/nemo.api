@@ -9,6 +9,10 @@
 namespace Nemo\Library\Response\Flight\Search;
 
 
+use Nemo\Library\Core\BaseHelper;
+use Nemo\Library\Response\Flight\Search\History\FormData;
+use Nemo\Library\Response\Flight\Search\Request;
+
 class History
 {
 
@@ -17,11 +21,16 @@ class History
     private $isDateRange;
     private $request;
     private $formData;
+    public $base;
 
-    public function __construct()
+
+    public $test;
+    public function __construct($data)
     {
-        $this->request = '';
-        $this->formData = '';
+        $this->base = new BaseHelper();
+        $this->request = new Request();
+        $this->formData = new FormData();
+        $this->base->mapper($data, $this);
     }
 
     /**
@@ -30,6 +39,38 @@ class History
     public function getHasResults()
     {
         return $this->hasResults;
+    }
+
+    /**
+     * @return Request
+     */
+    public function getRequest()
+    {
+        return $this->request;
+    }
+
+    /**
+     * @param Request $request
+     */
+    public function setRequest($request)
+    {
+        $this->request = $request;
+    }
+
+    /**
+     * @return FormData
+     */
+    public function getFormData()
+    {
+        return $this->formData;
+    }
+
+    /**
+     * @param FormData $formData
+     */
+    public function setFormData($formData)
+    {
+        $this->formData = $formData;
     }
 
     /**

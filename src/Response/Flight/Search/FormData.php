@@ -9,6 +9,10 @@
 namespace Nemo\Library\Response\Flight\Search;
 
 
+use Nemo\Library\Core\MaxLimits;
+use Nemo\Library\Response\DateOptions;
+use Nemo\Library\Response\PassengersSelect;
+
 class FormData
 {
     private $id;
