@@ -31,5 +31,5 @@ $data = json_decode('{"system": {
 $ystemInfo = new \Nemo\Library\Response\SystemInfo($data['system']['info']);
 //print_r($ystemInfo);
 $client = new GuzzleHttp\Client(['base_uri' => 'http://demo.nemo.travel/']);
-$response = $client->request('GET', '/api/flights/search/formData');
+$response = $client->request('GET', '/api/flights/search/results/53159/2015-06-12/2015-06-17');
 echo $response->getBody();
